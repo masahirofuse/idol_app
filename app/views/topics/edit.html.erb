@@ -1,0 +1,31 @@
+<div class="topic-edit">
+  <div class="container">
+    <div class="form-heading">
+      <h1>編集する</h1>
+    </div>
+    <div class="form">
+    <%= form_with url:("/topics/#{@topic.id}/update") do |f| %>
+      <div class="form-body">
+        <div class="title">
+          <h2>トピック</h2>
+          <%= f.text_area :title, value: @topic.title %>
+        </div>
+        <div class="image">
+          <h2>画像</h2>
+          <%= f.file_field :image %>
+        </div>
+        <div class="youtube">
+          <h2>Youtube_url</h2>
+          <%= f.text_field :youtube_url %>
+        </div>
+        <div class="submit">
+          <%= f.submit value: "保存" %>
+        </div>
+      </div>
+      <div class="delete"
+        <%= link_to("削除", "/topics/#{@topic.id}/destroy", {method:"topic"}) %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

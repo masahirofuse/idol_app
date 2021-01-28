@@ -1,0 +1,14 @@
+<h2>
+不適切なワードが含まれています。内容を変更してください
+</h2>
+<div class="confirm-form">
+  <%= form_with url:("/posts/create") do |f| %>
+    <div class="form">
+      <div class="form-body">
+        <%= f.text_area :content %>
+        <%= f.hidden_field :topic_id, value: @topic.id %>
+        <%= f.submit value: "登録"%>
+      </div>
+    </div>
+  <% end %>
+</div>

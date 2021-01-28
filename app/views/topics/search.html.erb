@@ -1,0 +1,13 @@
+<div class="topic-search">
+  <div class="search-heading">
+    <h1>検索結果</h1>
+  </div>
+  <div class="result">
+    <% @topics.each do |topic| %>
+    <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="300">
+    <p>
+      <%= link_to(topic.title, "/topics/#{topic.id}") %>
+    </p>
+    <% end %>
+  </div>
+</div>

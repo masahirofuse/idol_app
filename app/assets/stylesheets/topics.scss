@@ -1,0 +1,139 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//topic-index
+.topic-index{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  
+
+  
+
+  .index-new{
+    float: left;
+    padding: 30px 100px;
+
+    .new-heading{
+      text-align: center;
+    }
+
+    .link-new{
+      text-align: center;
+      padding-top: 40px;
+    }
+  }
+
+  .index-search{
+    float: right;
+    padding: 30px 100px;
+    
+    
+    .search-heading{
+      text-align: center;
+
+    }
+    .link-search{
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .search-form{
+      text-align: center;
+    }
+  }
+
+  .topics{
+    clear : both;
+    padding-top: 50px;
+    padding: 30px 70px;
+    text-align: center;
+    
+
+    
+
+    .topics-intro{
+      padding-top: 30px;
+      display: flex;
+      flex-basis: 10px;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+  }
+  
+
+}
+
+//topic-show
+.topic-show{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding: 30px 90px;
+
+  .topic-title{
+
+    .topic-edit{
+      
+      p{
+        opacity: 0.5;
+        
+      }
+    }
+
+  }
+
+  .topic-img{
+    float: left;
+    padding-left: 30px;
+  }
+
+  .topic-youtube{
+    float: right;
+    padding-right: 30px;
+  }
+
+  .topic-create{
+    clear : both;
+    padding-top: 30px;
+  }
+
+  .topic-post{
+    clear: both;
+    
+    p{
+      opacity: 0.5;
+    }
+  }
+}
+
+//topic-new
+
+.topic-new{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-align: center;
+  padding-top: 30px;
+}
+
+//topic-search
+
+.topic-search{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-align: center;
+  padding-top: 30px;
+}
+
+//topic-edit
+
+.topic-edit{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-align: center;
+  padding-top: 30px;
+
+  .submit{
+    padding: 30px 0;
+  }
+  .delete{
+    opacity: 0.5;
+  }
+}

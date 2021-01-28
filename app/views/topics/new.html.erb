@@ -1,0 +1,11 @@
+<div class="topic-new">
+  <div class="new-heading">
+    <h1>新しい部屋の名前を決めよう！</h1>
+  </div>
+  <div class="new-form">
+    <%= form_with url:("/topics/create") do |f|%>
+    <%= f.text_area :title %>
+    <%= f.submit value="作成" %>
+    <% end %>
+  </div>
+</div>

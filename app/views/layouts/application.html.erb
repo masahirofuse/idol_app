@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>アイドルInfo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+  </style>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+        <hr color="#99FF99	" size="5px" >
+      <div class="header-left">
+        <% @current_user = User.find_by(id: session[:user_id]) %>
+        <% if @current_user %>
+          <%= link_to("アイドルInfo", "/topics") %>
+        <% else %>
+          <%= link_to("アイドルInfo", "/") %>
+        <% end %>
+      </div>
+      <div class="header-list">
+        <ul>
+          <% if @current_user %>  
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
+          <li>
+            <%= link_to("ユーザー一覧","/users/index") %>
+          </li>
+          <li>
+            <%= link_to("トピック一覧", "/topics") %>
+          </li>
+          <li>
+            <%= link_to("ログアウト", "/logout",{method: :post}) %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>  
+          <% end %>
+        </ul>
+      </div>
+    </header>
+    <% if flash[:notice]%>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+
+  </body>
+</html>

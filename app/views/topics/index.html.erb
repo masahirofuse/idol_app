@@ -1,0 +1,53 @@
+<div class="topic-index">
+  <div class="index-new">
+    <div class="new-heading">
+      <h1>掲示板を立ててみんなに知ってもらおう！</h1>
+    </div>
+    <div class="link-new">
+      <%= link_to("新しい部屋を作る", "/topics/new") %>
+    </div>
+  </div>
+
+  <div class="index-search">
+    <div class="search-heading">
+      <h1>気になるアイドルの掲示板を探そう！</h1>
+    </div>
+    <div class="link-search">
+      <%= form_with url:("/topics/search"),method: :get, local: true do |f| %>
+    </div>
+    <div class="search-form">
+      <div class="search-body">
+        <%= f.text_area :title %>
+        <%= f.submit value: "検索" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+      
+
+
+  <div class="topics">
+    <div class="topics-heading">
+      <h1>最新トピック一覧</h1>
+    </div>
+    <div class="topics-intro">
+      
+        <% @topics.each do |topic| %>
+      
+        <div class="topics-item">
+          <div class="topics-img">
+            <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="350">
+          </div>
+          <div class="topic-name">
+            <h2>
+            <%= link_to(topic.title, "/topics/#{topic.id}") %>
+            </h2>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
