@@ -69,9 +69,11 @@
 //topic-show
 .topic-show{
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  padding: 30px 90px;
+  padding: 30px 60px;
 
   .topic-title{
+
+    
 
     .topic-edit{
       
@@ -80,16 +82,24 @@
         
       }
     }
+    .topic-img{
+      
+      float: left;
+      padding-left: 30px;
+    }
+    .twitter-url{
+      float: right;
+      padding-right: 150px;
+      padding-bottom: 30px;
+     }
 
   }
 
-  .topic-img{
-    float: left;
-    padding-left: 30px;
-  }
+  
 
   .topic-youtube{
-    float: right;
+    clear : both;
+    text-align: center;
     padding-right: 30px;
   }
 

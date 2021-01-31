@@ -1,6 +1,8 @@
 <div class="topic-show">
   <div class="topic-title">
-    <h1><%= @topic.title %></h1>
+    <div class="title">
+      <h1><%= @topic.title %></h1>
+    </div>
     <div class="topic-edit">
     <% if @topic.user_id == @current_user.id %>
       <p>
@@ -8,11 +10,16 @@
       </p>
     <% end %>
     </div>
+    <div class="topic-img">
+      <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="600px" >
+    </div>
+    <div class="twitter-url">
+      <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="500px" height="500px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    
   </div>
 
-  <div class="topic-img">
-    <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="600px" >
-  </div>
+  
 
   <div class="topic-youtube">
     

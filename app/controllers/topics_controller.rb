@@ -58,6 +58,12 @@ class TopicsController < ApplicationController
       @topic.youtube_url = url
     end
 
+    unless params[:twitter_url] == ""
+      url = params[:twitter_url]
+      url = url.from(20)
+      @topic.twitter_url = url
+    end
+
     if params[:image]
       @topic.topic_image_name = "#{@topic.id}.t.jpg"
       image = params[:image]
