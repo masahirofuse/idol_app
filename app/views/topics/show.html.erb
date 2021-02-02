@@ -44,8 +44,11 @@
     <% @posts.each do |post| %>
     <h2>
      :  <%= post.content %>
+        
     </h2>
-    
+    <p>
+    <%= link_to(post.user_id, "/users/#{post.user_id}") %>
+    </p>
     <% if post.user_id == @current_user.id %>
       <div class="post-menus">
         <p>
