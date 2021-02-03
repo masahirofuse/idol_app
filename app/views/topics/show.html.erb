@@ -11,25 +11,24 @@
     <% end %>
     </div>
     <div class="topic-img">
-      <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="600px" >
+      <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="560px" >
     </div>
     <div class="twitter-url">
       <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="500px" height="500px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    
+    <div class="topic-youtube">
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+    </div>
   </div>
 
   
 
-  <div class="topic-youtube">
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-  </div>
   
-  
-  <div class="topic-create">
-    <%= form_with model:@post, url:("/posts/create") do |f| %>
+  <div class ="post-comment">
+    <div class="topic-create">
+      <%= form_with model:@post, url:("/posts/create") do |f| %>
       <div class="form">
         <div class="form-body">
           <%= f.text_area :content %>
@@ -38,28 +37,28 @@
         </div>
       </div>
     <% end %>
-  </div>
+    </div>
 
-  <div class="topic-post">
-    <% @posts.each do |post| %>
-    <h2>
-     :  <%= post.content %>
+    <div class="topic-post">
+      <% @posts.each do |post| %>
+      <h2>
+      :  <%= post.content %>
         
-    </h2>
-    <p>
-    <%= link_to(post.user_id, "/users/#{post.user_id}") %>
-    </p>
-    <% if post.user_id == @current_user.id %>
-      <div class="post-menus">
-        <p>
-        <%= link_to("編集", "/posts/#{post.id}/edit") %>
-        </p>
-      </div>
+      </h2>
+      <p>
+      <%= link_to(post.user_id, "/users/#{post.user_id}") %>
+      </p>
+      <% if post.user_id == @current_user.id %>
+        <div class="post-menus">
+          <p>
+          <%= link_to("編集", "/posts/#{post.id}/edit") %>
+          </p>
+        </div>
       
-    <% end %>
-    <% end %>
+      <% end %>
+      <% end %>
+    </div>
   </div>
-  
 
   
 </div>

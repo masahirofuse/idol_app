@@ -69,10 +69,13 @@
 //topic-show
 .topic-show{
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  padding: 30px 60px;
+  padding: 30px 90px;
+  display: flex;
+  justify-content: space-between;
 
+  
+  flex-direction: row;
   .topic-title{
-
     
 
     .topic-edit{
@@ -84,35 +87,37 @@
     }
     .topic-img{
       
-      float: left;
-      padding-left: 30px;
+      
     }
     .twitter-url{
-      float: right;
-      padding-right: 150px;
+      
       padding-bottom: 30px;
+     }
+
+     .topic-youtube{
+       clear : both;
+       
      }
 
   }
 
   
 
-  .topic-youtube{
-    clear : both;
-    text-align: center;
-    padding-right: 30px;
-  }
-
-  .topic-create{
-    clear : both;
-    padding-top: 30px;
-  }
-
-  .topic-post{
-    clear: both;
+  .post-comment{
+    padding-top: 200px;
+    padding-left: 300px;
     
-    p{
-      opacity: 0.5;
+    .topic-create{
+      clear : both;
+      padding-top: 30px;
+    }
+  
+    .topic-post{
+      clear: both;
+      
+      p{
+        opacity: 0.5;
+      }
     }
   }
 }
