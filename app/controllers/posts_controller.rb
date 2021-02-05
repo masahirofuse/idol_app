@@ -12,6 +12,11 @@ class PostsController < ApplicationController
     )
     @topic = Topic.find(params[:topic_id])
 
+    if params[:image]
+      @post.post_image_name = "#{@post.id}.p.jpg"
+      image = params[:image]
+      File.binwrite("public/post_images/#{@post.post_image_name}",image.read)
+    end
     
     
     if @post.save
@@ -34,6 +39,13 @@ class PostsController < ApplicationController
   def update
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
+
+    if params[:image]
+      @post.post_image_name = "#{@post.id}.p.jpg"
+      image = params[:image]
+      File.binwrite("public/post_images/#{@post.post_image_name}",image.read)
+    end
+    
     if @post.save
       flash[:notice] = "更新しましした"
       redirect_to("/topics/#{@post.topic_id}")

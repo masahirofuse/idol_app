@@ -32,6 +32,7 @@
       <div class="form">
         <div class="form-body">
           <%= f.text_area :content %>
+          <%= f.file_field :image %>
           <%= f.hidden_field :topic_id, value: @topic.id %>
           <%= f.submit  value: "登録" %>
         </div>
@@ -40,11 +41,15 @@
     </div>
 
     <div class="topic-post">
-      <% @posts.each do |post| %>
+      <%= @posts.each do |post| %>
       <h2>
       :  <%= post.content %>
         
       </h2>
+      <% if post.post_image_name != nil %>
+      <img src="<%= "/post_images/#{post.post_image_name}" %>" width="300px" >
+      <% end %>
+    
       <p>
       <%= link_to(post.user_id, "/users/#{post.user_id}") %>
       </p>
