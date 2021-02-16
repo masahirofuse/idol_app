@@ -69,29 +69,26 @@
 //topic-show
 .topic-show{
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  padding: 30px 90px;
+  padding: 30px ;
+
   display: flex;
-  justify-content: space-between;
-
   
-  flex-direction: row;
   .topic-title{
-    
+    padding-left: 300px;
 
-    .topic-edit{
+    
       
       p{
         opacity: 0.5;
         
       }
-    }
     .topic-img{
       
       
     }
     .twitter-url{
       
-      padding-bottom: 30px;
+      padding: 30px 0;
      }
 
      .topic-youtube{
@@ -99,25 +96,44 @@
        
      }
 
+     .post-comment{
+       padding-top: 100px;
+       
+       
+       .topic-create{
+         clear : both;
+         padding-top: 30px;
+       }
+     
+       .topic-post{
+         clear: both;
+         
+         li{
+           list-style: none;
+           display: inline-block;
+         }
+         p{  
+           opacity: 0.5;
+         }
+       }
+     }
   }
 
   
 
-  .post-comment{
-    padding-top: 200px;
+
+  .another{
     padding-left: 300px;
+    padding-top: 200px;
+    display: flex;
+    flex-basis: 10px;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:  flex-start;
     
-    .topic-create{
-      clear : both;
-      padding-top: 30px;
-    }
-  
-    .topic-post{
-      clear: both;
-      
-      p{
-        opacity: 0.5;
-      }
+    p{
+      text-align: center;
     }
   }
 }

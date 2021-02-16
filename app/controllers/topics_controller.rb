@@ -26,7 +26,8 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find_by(id: params[:id])
     @posts = Post.where(topic_id: params[:id])
-    @User = User.find_by(id: params[:id])
+    
+    @topics = Topic.all.order(post_created_at: "DESC")
   end
 
   def confirm

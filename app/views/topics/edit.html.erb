@@ -26,7 +26,7 @@
           <%= f.submit value: "保存" %>
         </div>
       </div>
-      <div class="delete"
+      <div class="delete">
         <%= link_to("削除", "/topics/#{@topic.id}/destroy", {method:"topic"}) %>
       </div>
     <% end %>

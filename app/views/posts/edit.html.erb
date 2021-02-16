@@ -10,9 +10,14 @@
       <div class="form">
         <div class="form-body">
           <%= f.text_area :content, value: @post.content %>
+        </div>
+        <div class="form-img">
           <%= f.file_field :image %>
+        </div>
+        <div class="form-submit">
           <%= f.submit  value: "更新" %>
         </div>
+        
       </div>
     <% end %>
     <div class="delete">

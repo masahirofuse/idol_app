@@ -2,68 +2,95 @@
   <div class="topic-title">
     <div class="title">
       <h1><%= @topic.title %></h1>
-    </div>
-    <div class="topic-edit">
-    <% if @topic.user_id == @current_user.id %>
+      <hr>
+      <% if @topic.user_id == @current_user.id %>
       <p>
         <%= link_to("編集", "/topics/#{@topic.id}/edit") %>
       </p>
     <% end %>
     </div>
+    
     <div class="topic-img">
       <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="560px" >
     </div>
+    <hr>
     <div class="twitter-url">
       <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="560px" height="500px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <hr>
     <div class="topic-youtube">
       
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
     </div>
-  </div>
-
-  
-
-  
-  <div class ="post-comment">
-    <div class="topic-create">
-      <%= form_with model:@post, url:("/posts/create") do |f| %>
-      <div class="form">
-        <div class="form-body">
-          <%= f.text_area :content %>
-          <%= f.file_field :image %>
-          <%= f.hidden_field :topic_id, value: @topic.id %>
-          <%= f.submit  value: "登録" %>
+    <div class ="post-comment">
+      <div class="topic-create">
+        <%= form_with model:@post, url:("/posts/create") do |f| %>
+        <div class="form">
+          <div class="form-body">
+            <%= f.text_area :content %>
+            <%= f.file_field :image %>
+            <%= f.hidden_field :topic_id, value: @topic.id %>
+            <%= f.submit  value: "登録" %>
+          </div>
         </div>
+      <% end %>
       </div>
-    <% end %>
-    </div>
-
-    <div class="topic-post">
-      <%= @posts.each do |post| %>
-      <h2>
-      :  <%= post.content %>
-        
-      </h2>
-      <% if post.post_image_name != nil %>
-      <img src="<%= "/post_images/#{post.post_image_name}" %>" width="300px" >
-      <% end %>
-    
-      <p>
-      <%= link_to(post.user_id, "/users/#{post.user_id}") %>
-      </p>
-      <% if post.user_id == @current_user.id %>
-        <div class="post-menus">
+  
+      <div class="topic-post">
+        <% @posts.each do |post| %>
+        <hr size="5" >
+        <ul>
+        <li>
+          <h2>
+          :  <%= post.content %>
+          </h2>
+        </li>
+        <li>
           <p>
-          <%= link_to("編集", "/posts/#{post.id}/edit") %>
+          <%= link_to(post.user_id, "/users/#{post.user_id}") %>
           </p>
-        </div>
+        </li>
+        <li>
+          <% if post.user_id == @current_user.id %>
+          <div class="post-menus">
+            <p>
+            <%= link_to("編集", "/posts/#{post.id}/edit") %>
+            </p>
+          </div>
       
-      <% end %>
-      <% end %>
+          <% end %>
+        </li>
+        <li>
+        <% if post.post_image_name != nil %>
+        <img src="<%= "/post_images/#{post.post_image_name}" %>" width="300px" >
+        <% end %>
+        </li>
+        </ul>
+
+      
+        
+        
+        
+        <% end %>
+      </div>
     </div>
   </div>
 
+  <div class="another">
+  <% @topics.each do |topic| %>
+      
+    <div class="topics-item">
+      <div class="topics-img">
+        <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="200">
+      </div>
+      <div class="topic-name">
+        <p>
+        <%= link_to(topic.title, "/topics/#{topic.id}") %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+  </div>
   
 </div>
