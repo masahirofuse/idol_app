@@ -14,13 +14,14 @@
     </div>
     <div class="link-search">
       <%= form_with url:("/topics/search"),method: :get, local: true do |f| %>
-    </div>
+   
     <div class="search-form">
       <div class="search-body">
         <%= f.text_area :title %>
         <%= f.submit value: "検索" %>
       <% end %>
       </div>
+    </div>
     </div>
   </div>
 
@@ -33,7 +34,7 @@
     </div>
     <div class="topics-intro">
       
-        <% @topics.each do |topic| %>
+        <%= @topics.each do |topic| %>
       
         <div class="topics-item">
           <div class="topics-img">

@@ -24,8 +24,8 @@ class PostsController < ApplicationController
       flash[:notice] ="コメントが追加されました"
       redirect_to("/topics/#{@post.topic_id}")
     else
-      
-      redirect_to("/topics/#{@post.topic_id}/confirm")
+      flash[:notice] = "不適切なワードが含まれています"
+      redirect_to("/topics/#{@post.topic_id}")
     end
 
   end

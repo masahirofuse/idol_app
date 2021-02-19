@@ -26,8 +26,9 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find_by(id: params[:id])
     @posts = Post.where(topic_id: params[:id])
-    
     @topics = Topic.all.order(post_created_at: "DESC")
+
+    
   end
 
   def confirm
@@ -37,7 +38,8 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(
       title: params[:title],
-      user_id: @current_user.id
+      user_id: @current_user.id,
+      topic_image_name: "watermark.jpg",
     )
     if @topic.save
       redirect_to("/topics")

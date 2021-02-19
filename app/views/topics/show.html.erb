@@ -18,11 +18,13 @@
       <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="560px" height="500px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <hr>
+    <% if @topic&.youtube_url %>
     <div class="topic-youtube">
       
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
     </div>
+    <% end %>
     <div class ="post-comment">
       <div class="topic-create">
         <%= form_with model:@post, url:("/posts/create") do |f| %>
@@ -39,7 +41,7 @@
   
       <div class="topic-post">
         <% @posts.each do |post| %>
-        <hr size="5" >
+        
         <ul>
         <li>
           <h2>
@@ -48,7 +50,7 @@
         </li>
         <li>
           <p>
-          <%= link_to(post.user_id, "/users/#{post.user_id}") %>
+          <%= link_to(post.user.name, "/users/#{post.user_id}") %>
           </p>
         </li>
         <li>
@@ -67,6 +69,7 @@
         <% end %>
         </li>
         </ul>
+        <hr size="5" >
 
         <% end %>
       </div>
