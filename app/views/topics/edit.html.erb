@@ -10,6 +10,10 @@
           <h2>トピック</h2>
           <%= f.text_area :title, value: @topic.title %>
         </div>
+        <div class="hp">
+          <h2>ホームページ</h2>
+          <%= f.text_field :hp_url %>
+        </div>
         <div class="image">
           <h2>画像</h2>
           <%= f.file_field :image %>
@@ -22,6 +26,7 @@
           <h2>twitter_url</h2>
           <%= f.text_field :twitter_url %>
         </div>
+        
         <div class="submit">
           <%= f.submit value: "保存" %>
         </div>

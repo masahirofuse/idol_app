@@ -74,6 +74,10 @@ class TopicsController < ApplicationController
       File.binwrite("public/topic_images/#{@topic.topic_image_name}",image.read)
     end
 
+    if params[:hp_url]
+      @topic.hp_url = params[:hp_url]
+    end
+
     if @topic.save
       flash[:notice] = "更新しました"
       redirect_to("/topics/#{@topic.id}")

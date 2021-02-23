@@ -1,7 +1,12 @@
 <div class="topic-show">
   <div class="topic-title">
     <div class="title">
-      <h1><%= @topic.title %></h1>
+      <h1>
+      <%= @topic.title %>
+      <% if @topic&.hp_url %>
+      (<%= link_to("ホームページはこちら", @topic.hp_url) %>)
+      <% end %>
+      </h1>
       <hr>
       <% if @topic.user_id == @current_user.id %>
       <p>
@@ -81,7 +86,7 @@
       
     <div class="topics-item">
       <div class="topics-img">
-        <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="200">
+      <%= link_to image_tag("/topic_images/#{topic.topic_image_name}",width: 200), "/topics/#{topic.id}"  %>
       </div>
       <div class="topic-name">
         <p>

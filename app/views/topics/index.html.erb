@@ -17,6 +17,7 @@
    
     <div class="search-form">
       <div class="search-body">
+        
         <%= f.text_area :title %>
         <%= f.submit value: "検索" %>
       <% end %>
@@ -38,8 +39,9 @@
       
         <div class="topics-item">
           <div class="topics-img">
-            <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="350">
+            <%= link_to image_tag("/topic_images/#{topic.topic_image_name}",width: 350), "/topics/#{topic.id}"  %>
           </div>
+          
           <div class="topic-name">
             <h2>
             <%= link_to(topic.title, "/topics/#{topic.id}") %>
