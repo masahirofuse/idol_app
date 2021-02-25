@@ -4,7 +4,8 @@
       <h1>
       <%= @topic.title %>
       <% if @topic&.hp_url %>
-      (<%= link_to("ホームページはこちら", @topic.hp_url) %>)
+      (<i class="fas fa-home icon"></i>
+      <%= link_to("ホームページはこちら", @topic.hp_url) %>)
       <% end %>
       </h1>
       <hr>
@@ -16,17 +17,20 @@
     </div>
     
     <div class="topic-img">
-      <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="560px" >
+    <i class="fas fa-images icon"></i>
+      <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="700px" >
     </div>
     <hr>
     <div class="twitter-url">
-      <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="560px" height="500px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <i class="fab fa-twitter-square"></i>
+      <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="700px" height="600px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <hr>
     <% if @topic&.youtube_url %>
+    <i class="fab fa-youtube"></i>
     <div class="topic-youtube">
       
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="700" height="395" src="https://www.youtube.com/embed/<%= @topic.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
     </div>
     <% end %>

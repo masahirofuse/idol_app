@@ -4,6 +4,7 @@
       <h1>掲示板を立ててみんなに知ってもらおう！</h1>
     </div>
     <div class="link-new">
+    <i class="fas fa-plus-circle icon"></i>
       <%= link_to("新しい部屋を作る", "/topics/new") %>
     </div>
   </div>
@@ -13,13 +14,16 @@
       <h1>気になるアイドルの掲示板を探そう！</h1>
     </div>
     <div class="link-search">
+    
       <%= form_with url:("/topics/search"),method: :get, local: true do |f| %>
    
     <div class="search-form">
       <div class="search-body">
         
         <%= f.text_area :title %>
-        <%= f.submit value: "検索" %>
+        <button type="submit">
+          <i class="fas fa-search icon"></i> 
+        </button>
       <% end %>
       </div>
     </div>

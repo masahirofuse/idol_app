@@ -12,11 +12,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
   </head>
 
   <body>
     <header>
-        <hr color="#99FF99	" size="5px" >
+        <hr color="#ED7381" size="5px" >
       <div class="header-left">
         <% @current_user = User.find_by(id: session[:user_id]) %>
         <% if @current_user %>
@@ -29,22 +30,28 @@
         <ul>
           <% if @current_user %>  
           <li>
+          <i class="fas fa-user-cog icon"></i>
             <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
           <li>
+            <i class="fas fa-users icon"></i>
             <%= link_to("ユーザー一覧","/users/index") %>
           </li>
           <li>
+          <i class="fas fa-user-check icon" ></i>
             <%= link_to("トピック一覧", "/topics") %>
           </li>
           <li>
+          <i class="fas fa-sign-out-alt icon" ></i>
             <%= link_to("ログアウト", "/logout",{method: :post}) %>
           </li>
           <% else %>
           <li>
+          <i class="fas fa-plus-square icon"></i>
             <%= link_to("新規登録", "/signup") %>
           </li>
           <li>
+          <i class="fas fa-sign-in-alt icon"></i>
             <%= link_to("ログイン", "/login") %>
           </li>  
           <% end %>

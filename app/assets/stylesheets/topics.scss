@@ -72,27 +72,37 @@
 .topic-show{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   padding: 30px ;
-
   display: flex;
+
+  
   
   .topic-title{
-    padding-left: 300px;
+    padding-left: 200px;
 
-    
+    a{
+      font-size: 15px;
+    }
+
+    .fa-twitter-square{
+      color:#1da1f2;
+      font-size: 20px;
+    }
+
       
       p{
         opacity: 0.5;
         
       }
+      
+      
     
     .twitter-url{
-      
       padding: 30px 0;
      }
+    
 
      .topic-youtube{
        clear : both;
-       
      }
 
      .post-comment{
@@ -166,4 +176,15 @@
   .delete{
     opacity: 0.5;
   }
+}
+
+.fa-twitter-square{
+  color:#1ca0f2;
+  font-size: 30px;
+}
+
+.fa-youtube{
+  color:#ff0000;
+  font-size: 30px;
+  padding-top: 30px;
 }

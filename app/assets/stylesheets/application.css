@@ -20,13 +20,14 @@ header{
   height: 90px;
   padding-top: 0;
   margin-bottom: 30px;
+  
 }
 
 
 .header-left{
   font-size: 20px;
   float: left;
-  padding: 20px 40px;
+  padding: 20px 150px;
 }
 
  
@@ -41,6 +42,7 @@ header li{
 
 .header-list{
   float: right;
+  padding: 0px 100px;
 }
 
 a{
@@ -56,3 +58,7 @@ a{
   font-size: 20px;
 }
 
+.icon{
+  font-size: 20px;
+  color: #ED7381;
+}
