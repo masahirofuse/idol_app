@@ -21,10 +21,12 @@
       <img src="<%= "/topic_images/#{@topic.topic_image_name}" %>" width="700px" >
     </div>
     <hr>
+    <% if @topic&.youtube_url %>
     <div class="twitter-url">
     <i class="fab fa-twitter-square"></i>
-      <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="700px" height="600px"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" href="https://twitter.com/<%= @topic.twitter_url%>?ref_src=twsrc%5Etfw" width="700px" height="600px">Tweets by <%= @topic.twitter_url %></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <% end %>
     <hr>
     <% if @topic&.youtube_url %>
     <i class="fab fa-youtube"></i>
