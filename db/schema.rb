@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_114111) do
+ActiveRecord::Schema.define(version: 2021_03_02_223830) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "topic_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_02_21_114111) do
     t.string "youtube_url"
     t.string "twitter_url"
     t.string "hp_url"
+    t.string "twitter"
   end
 
   create_table "users", force: :cascade do |t|

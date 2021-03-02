@@ -62,10 +62,10 @@ class TopicsController < ApplicationController
       @topic.youtube_url = url
     end
 
-    unless params[:twitter_url] == ""
-      url = params[:twitter_url]
+    unless params[:twitter] == ""
+      url = params[:twitter]
       url = url.from(20)
-      @topic.twitter_url = url
+      @topic.twitter = url
     end
 
     if params[:image]
