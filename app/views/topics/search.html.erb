@@ -4,7 +4,7 @@
   </div>
   <div class="result">
     <% @topics.each do |topic| %>
-    <img src="<%= "/topic_images/#{topic.topic_image_name}" %>" width="300">
+    <%= link_to image_tag("/topic_images/#{topic.topic_image_name}",width: 300), "/topics/#{topic.id}"  %>
     <p>
       <%= link_to(topic.title, "/topics/#{topic.id}") %>
     </p>
