@@ -11,6 +11,7 @@
         </div>
       <% end %>
 
+      
       <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
         <h2>ユーザー名</h2>
         <input name="name" value="<%= @current_user.name %>">
