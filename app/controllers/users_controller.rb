@@ -74,7 +74,7 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:notice] = "ユーザー情報を編集しました"
-      redirect_to("users/#{@user.id}")
+      redirect_to("/users/#{@user.id}")
     else
       flash[:notice] = "失敗"
       render("users/#{@user.id}/edit")

@@ -5,23 +5,27 @@
     </div>
     <div class="users-form">
       <div class="form-body">
-      <% @user.errors.full_messages.each do |message| %>
+        <% @user.errors.full_messages.each do |message| %>
         <div class="form-error">
           <%= message %>
         </div>
-      <% end %>
-
+        <% end %>
+      </div>
       
-      <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+      <div class="form">
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
         <h2>ユーザー名</h2>
         <input name="name" value="<%= @current_user.name %>">
         <h2>画像</h2>
         <input name="image" type="file" >
         <h2>メールアドレス</h2>
         <input name="email" value="<%= @current_user.email %>">
+        
         <input type="submit" value="保存">
-      <% end %>
+        <% end %>
       </div>
+
+      
     </div>
   </div>
 </div>

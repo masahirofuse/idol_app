@@ -13,15 +13,17 @@ Rails.application.routes.draw do
   
   get '/' => "home#top"
   
-  post "/users/:id/update" => "users#update"
+ 
   get "/users/index" => "users#index"
-  get "/users/:id" => "users#show"
+  
   get "/signup"=> "users#signup"
   get "/login" => "users#login_form"
   post "/login" => "users#login"
   post "/logout" => "users#logout"
   post "/users/create" => "users#create"
+  get "/users/:id" => "users#show"
   get "/users/:id/edit" => "users#edit"
+  post "/users/:id/update" => "users#update"
   
   post "/posts/create" => "posts#create"
   get "/posts/:id/edit" => "posts#edit"
