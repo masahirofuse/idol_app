@@ -7,7 +7,7 @@
     <% @users.each do |user| %>
     <div class="users-index-item">
       <div class="user-img">
-        <img src="<%= "/user_images/#{user.image_name}" %>">
+        <%= link_to image_tag("/user_images/#{user.image_name}",width: 200), "/users/#{user.id}"  %>
       </div>
       <div class="user-right">
       <h2>

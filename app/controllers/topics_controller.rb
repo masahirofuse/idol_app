@@ -41,10 +41,14 @@ class TopicsController < ApplicationController
       user_id: @current_user.id,
       topic_image_name: "watermark.jpg",
     )
-    if @topic.save
+
+    if params[:title] == ""
+      redirect_to("/topics/new")
+      flash[:notice] = "名前が入力されていません"
+    else
+      @topic.save
       redirect_to("/topics")
       flash[:notice] = "新しいスレッドが作成されました"
-
     end
   end
 
