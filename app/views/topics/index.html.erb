@@ -39,8 +39,8 @@
     </div>
     <div class="topics-intro">
       
-        <% @topics.each do |topic| %>
-      
+        <% @topics.first(8).each do |topic| %>
+          
         <div class="topics-item">
           <div class="topics-img">
             <%= link_to image_tag("/topic_images/#{topic.topic_image_name}",width: 350), "/topics/#{topic.id}"  %>
