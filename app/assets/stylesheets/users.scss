@@ -2,99 +2,300 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// signup.html.erb
-.form-signup{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  padding-top: 30px;
-
-  .form-create{
-
-    .form-submit{
-      
-      padding-top: 30px;
-    }
-    
-  }
-}
-
-//login_form.html.erb
-.login-form{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  padding-top: 30px;
-
-
-  .form-create{
-
-    .form-submit{
-      
-      padding-top: 30px;
-    }
-    
-  }
-
-}
-
-//index.html.erb
-.user-index{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  clear : both;
-  padding-top: 50px;
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
   
-  .user-info{
+  // signup.html.erb
+  .form-signup{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
     padding-top: 30px;
-    display: flex;
-    flex-basis: 10px;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
     
-    .users-index-item{
+    .form-create{
       
-      .user-img{
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+  }
+  
+  //login_form.html.erb
+  .login-form{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+    .form-create{
+      
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+    
+  }
+  
+  //index.html.erb
+  .user-index{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    clear : both;
+    padding-top: 50px;
+    
+    .user-info{
+      padding-top: 30px;
+      display: flex;
+      flex-basis: 10px;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      
+      .users-index-item{
+        
+        .user-img{
+          
+          img{
+            border-radius: 40%; 
+            width:  100px;       
+            height: 100px;       
+          }
+          
+        }
+      }
+      
+    }
+    
+  }
+  
+  //show.html.css
+  
+  .user-show{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    .container{
+      
+      .user{
         
         img{
           border-radius: 40%; 
-          width:  100px;       
-          height: 100px;       
-        }
-       
-      }
-    }
-
-  }
-
-}
-
-//show.html.css
-
-.user-show{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  padding-top: 30px;
-
-  .container{
-
-    .user{
-      
-      img{
-        border-radius: 40%; 
           width:  180px;       
           height: 180px;  
+        }
       }
     }
   }
+  
+  //edit.html.erb
+  
+  .user-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+  }
 }
 
-//edit.html.erb
-
-.user-edit{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  padding-top: 30px;
-
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+  // signup.html.erb
+  .form-signup{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    .form-create{
+      
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+  }
   
+  //login_form.html.erb
+  .login-form{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+    .form-create{
+      
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+    
+  }
+  
+  //index.html.erb
+  .user-index{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    clear : both;
+    padding-top: 50px;
+    
+    .user-info{
+      padding-top: 30px;
+      display: flex;
+      flex-basis: 10px;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      
+      .users-index-item{
+        
+        .user-img{
+          
+          img{
+            border-radius: 40%; 
+            width:  100px;       
+            height: 100px;       
+          }
+          
+        }
+      }
+      
+    }
+    
+  }
+  
+  //show.html.css
+  
+  .user-show{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    .container{
+      
+      .user{
+        
+        img{
+          border-radius: 40%; 
+          width:  180px;       
+          height: 180px;  
+        }
+      }
+    }
+  }
+  
+  //edit.html.erb
+  
+  .user-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+  }
+}
+
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+  // signup.html.erb
+  .form-signup{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    .form-create{
+      
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+  }
+  
+  //login_form.html.erb
+  .login-form{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+    .form-create{
+      
+      .form-submit{
+        
+        padding-top: 30px;
+      }
+      
+    }
+    
+  }
+  
+  //index.html.erb
+  .user-index{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    clear : both;
+    padding-top: 50px;
+    
+    .user-info{
+      padding-top: 30px;
+      display: flex;
+      flex-basis: 10px;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      
+      .users-index-item{
+        
+        .user-img{
+          
+          img{
+            border-radius: 40%; 
+            width:  100px;       
+            height: 100px;       
+          }
+          
+        }
+      }
+      
+    }
+    
+  }
+  
+  //show.html.css
+  
+  .user-show{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    .container{
+      
+      .user{
+        
+        img{
+          border-radius: 40%; 
+          width:  180px;       
+          height: 180px;  
+        }
+      }
+    }
+  }
+  
+  //edit.html.erb
+  
+  .user-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    
+    
+  }
 }

@@ -15,50 +15,153 @@
  */
 
  
-
-header{
-  height: 90px;
-  padding-top: 0;
-  margin-bottom: 30px;
+ @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+  header{
+    height: 90px;
+    padding-top: 0;
+    margin-bottom: 30px;
+    
+  }
+  
+  
+  .header-left{
+    font-size: 20px;
+    float: left;
+    padding: 20px 100px;
+  }
+  
+  
+  
+  header li{
+    list-style: none;
+    
+    float: left;
+    padding: 33px 20px;
+    
+  }
+  
+  .header-list{
+    float: right;
+    padding: 0px 100px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+    font-size: 20px;
+  }
+  
+  .flash{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  
+  .icon{
+    font-size: 20px;
+    color: #3399FF	;
+  }
   
 }
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
 
-
-.header-left{
-  font-size: 20px;
-  float: left;
-  padding: 20px 150px;
-}
-
- 
-
-header li{
-  list-style: none;
   
-  float: left;
-  padding: 33px 20px;
+  header{
+    height: 90px;
+    padding-top: 0;
+    margin-bottom: 30px;
+    
+  }
   
+  
+  .header-left{
+    font-size: 20px;
+    float: left;
+    padding: 20px 100px;
+  }
+  
+  
+  
+  header li{
+    list-style: none;
+    
+    float: left;
+    padding: 33px 20px;
+    
+  }
+  
+  .header-list{
+    float: right;
+    padding: 0px 100px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+    font-size: 20px;
+  }
+  
+  .flash{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  
+  .icon{
+    font-size: 20px;
+    color: #3399FF	;
+  }
 }
 
-.header-list{
-  float: right;
-  padding: 0px 100px;
-}
 
-a{
-  text-decoration: none;
-  color: black;
-  font-family: 'M PLUS Rounded 1c', sans-serif; 
-  font-size: 20px;
-}
-
-.flash{
-  text-align: center;
-  padding-top: 20px;
-  font-size: 20px;
-}
-
-.icon{
-  font-size: 20px;
-  color: #3399FF	;
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+  
+  header{
+    height: 30px;
+    padding-top: 0;
+    margin-bottom: 30px;
+    
+  }
+  
+  
+  .header-left{
+    font-size: 10px;
+    float: left;
+    padding: 20px 50px;
+  }
+  
+  
+  
+  header li{
+    list-style: none;
+    
+    float: left;
+    padding: 33px 20px;
+    
+  }
+  
+  .header-list{
+    float: right;
+    padding: 0px 100px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+    font-size: 20px;
+  }
+  
+  .flash{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  
+  .icon{
+    font-size: 20px;
+    color: #3399FF	;
+  }
 }

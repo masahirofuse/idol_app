@@ -1,25 +1,87 @@
-//posts-edit
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
 
-.posts-edit{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  padding-top: 30px;
-
-
-  .form-body{
+  
+  //posts-edit
+  
+  .posts-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
     padding-top: 30px;
+    
+    
+    .form-body{
+      padding-top: 30px;
+    }
+    
+    .form-img{
+      padding-top: 30px;
+    }
+    
+    .form-submit{
+      padding-top: 33px;
+    }
+    
+    .delete{
+      opacity: 0.5;
+      padding-top: 30px;
+    }
   }
+}
 
-  .form-img{
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+
+  //posts-edit
+  
+  .posts-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
     padding-top: 30px;
+    
+    
+    .form-body{
+      padding-top: 30px;
+    }
+    
+    .form-img{
+      padding-top: 30px;
+    }
+    
+    .form-submit{
+      padding-top: 33px;
+    }
+    
+    .delete{
+      opacity: 0.5;
+      padding-top: 30px;
+    }
   }
+}
 
-  .form-submit{
-    padding-top: 33px;
-  }
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
 
-  .delete{
-    opacity: 0.5;
+  //posts-edit
+  
+  .posts-edit{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
     padding-top: 30px;
+    
+    
+    .form-body{
+      padding-top: 30px;
+    }
+    
+    .form-img{
+      padding-top: 30px;
+    }
+    
+    .form-submit{
+      padding-top: 33px;
+    }
+    
+    .delete{
+      opacity: 0.5;
+      padding-top: 30px;
+    }
   }
 }

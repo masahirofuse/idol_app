@@ -4,7 +4,7 @@
   </div>
   
   <div class="user-info">
-    <% @users.each do |user| %>
+    <% @users.first(8).each do |user| %>
     <div class="users-index-item">
       <div class="user-img">
         <%= link_to image_tag("/user_images/#{user.image_name}"), "/users/#{user.id}"  %>

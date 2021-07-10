@@ -2,56 +2,174 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.top-main{
-  padding: 0px 0 ;
-  text-align: center;
-  position:relative;
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
   
-  top: 0;
-  width: 100%;
-  height: auto;
-
-  img{
+  .top-main{
+    padding: 0px 0 ;
+    text-align: center;
+    position:relative;
+    
+    top: 0;
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    
+    img{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    h1{
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 40%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      /*文字の装飾は省略*/
+    }
+    
+    p{
+      font-size: 30px;
+      position: absolute;
+      color: white;
+      top: 55%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+    }
   }
-  
-  h1{
-    font-size: 60px;
-    position: absolute;
-    color: white;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
-    /*文字の装飾は省略*/
-  }
-
-  p{
-    font-size: 30px;
-    position: absolute;
-    color: white;
-    top: 55%;
-    left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
+  .intro{
+    font: inherit;
+    
+    .intro-title{
+      text-align: center;
+    }
+    
+    .intro-content{
+      text-align: center;
+    }
   }
 }
-.intro{
-  font: inherit;
+
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+
   
-  .intro-title{
+  .top-main{
+    padding: 0px 0 ;
     text-align: center;
+    position:relative;
+    
+    top: 0;
+    width: 100%;
+    height: auto;
+    
+    img{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    h1{
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 40%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      /*文字の装飾は省略*/
+    }
+    
+    p{
+      font-size: 30px;
+      position: absolute;
+      color: white;
+      top: 55%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+    }
   }
-  
-  .intro-content{
+  .intro{
+    font: inherit;
+    
+    .intro-title{
+      text-align: center;
+    }
+    
+    .intro-content{
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+
+  .top-main{
+    padding: 0px 0 ;
     text-align: center;
+    position:relative;
+    
+    top: 0;
+    width: 100%;
+    height: auto;
+    
+    img{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    h1{
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 40%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      /*文字の装飾は省略*/
+    }
+    
+    p{
+      font-size: 30px;
+      position: absolute;
+      color: white;
+      top: 55%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+    }
+  }
+  .intro{
+    font: inherit;
+    
+    .intro-title{
+      text-align: center;
+    }
+    
+    .intro-content{
+      text-align: center;
+    }
   }
 }
